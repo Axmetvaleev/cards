@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e0f7fa; /* Нежно-голубой */
+    color: #004d60; /* Темно-бирюзовый */
+    font-family: 'Asap', sans-serif;
+    font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, p {
+    text-align: center;
+}
+
+h1 {
+    margin-top: 1.25em; /* 20px -> 1.25em */
+    font-weight: 700;
+    font-size: 3.125em; /* 50px -> 3.125em */
+}
+
+.opisanie {
+    font-size: 1.4375em; /* 23px -> 1.4375em */
+    width: calc(100% - 4em); /* Ширина с учетом отступов */
+    max-width: 62.5em; /* 1000px -> 62.5em */
+    margin: 0 auto;
+}
+
+.test {
+    color: #e0f7fa; /* Нежно-голубой */
+    text-decoration: none;
+    font-size: 1.5625em; /* 25px -> 1.5625em */
+    padding: 0 0.625em; /* 10px -> 0.625em */
+    background-color: #004d60; /* Темно-бирюзовый */
+    border-radius: 0.625em; /* 10px -> 0.625em */
+    display: block;
+    width: fit-content; /* Устанавливает ширину в зависимости от контента */
+    margin: 0 auto; /* Центрирует элемент по горизонтали */
+}
+
+.test:hover {
+    background-color: #e0f7fa; /* Нежно-голубой */
+    color: #004d60; /* Темно-бирюзовый */
+    border: 0.0625em solid #004d60; /* 1px -> 0.0625em */
+    border-style: dashed;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 3.125em; /* 50px -> 3.125em */
+    margin-top: 2.5em; /* 40px -> 2.5em */
+}
+
+.card {
+    width: 25em; /* 400px -> 25em */
+    height: 12.5em; /* 200px -> 12.5em */
+    perspective: 62.5em; /* 1000px -> 62.5em */
+}
+
+.card_inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    position: relative;
+    border-radius: 1.25em; /* 20px -> 1.25em */
+}
+
+.transform-rotate {
+    transform: rotateY(180deg);
+}
+
+.side-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.font {
+    background-image: linear-gradient(to bottom left, #007c91, #b2ebf2); /* Бирюзовый и светло-голубой */
+    border-radius: 1.25em; /* 20px -> 1.25em */
+    width: 25em; /* 400px -> 25em */
+}
+
+.font h3 {
+    color: #ffffff; /* Белый текст */
+    margin-top: 2.875em; /* 17% от 200px -> 2.875em */
+}
+
+.back {
+    background-color: #e0f7fa; /* Нежно-голубой */
+    transform: rotateY(180deg);
+    border: 0.0625em solid #004d60; /* 1px -> 0.0625em */
+    border-radius: 1.25em; /* 20px -> 1.25em */
+}
+
+.back h3 {
+    font-size: 1.5625em; /* 25px -> 1.5625em */
+    color: #004d60; /* Темно-бирюзовый */
+    margin-top: 1.875em; /* 30px -> 1.875em */
+    margin-bottom: 1.875em; /* 30px -> 1.875em */
+    cursor: pointer;
+}
+
+.back h3:hover {
+    text-decoration: underline;
+}
+
+.cardHover {
+    background-image: linear-gradient(to bottom right, #007c91, #e0f7fa); /* Бирюзовый и нежно-голубой */
+}
+
+.cardHover:hover {
+    box-shadow: 0.0625em 0.9375em 0.9375em rgba(0, 0, 0, .2); /* 1px 15px 15px -> 0.0625em 0.9375em 0.9375em */
+    cursor: pointer;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+    margin-bottom: 1.25em; /* 20px -> 1.25em */
+}
+
+.teory {
+    font-size: 1.25em; /* 20px -> 1.25em */
+    width: 62.5em; /* 1000px -> 62.5em */
+    margin: 0 auto;
+}
+
+.modal-content {
+    background-color: #e0f7fa; /* Нежно-голубой */
+    margin: 9.375em auto; /* 15% -> 9.375em */
+    padding: 1.25em; /* 20px -> 1.25em */
+    border: 0.0625em solid #888; /* 1px -> 0.0625em */
+    width: 80%;
+}
+
+.close {
+    color: #004d60; /* Темно-бирюзовый */
+    float: right;
+    font-size: 1.75em; /* 28px -> 1.75em */
+    font-weight: bold;
+    cursor: pointer;
+}
